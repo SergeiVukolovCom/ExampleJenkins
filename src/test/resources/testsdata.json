@@ -1,0 +1,6 @@
+{
+  "url" : "http://tl.af-ctf.ru/#inputForAuth",
+  "urlForRequestSignUp" : "http://tl.af-ctf.ru/signUp",
+  "urlForRequestCallUser" : "http://tl.af-ctf.ru/calluserforsignup/",
+  "statusCodeOK" : 200
+}
