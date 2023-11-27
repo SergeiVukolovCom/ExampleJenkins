@@ -8,11 +8,5 @@ pipeline {
                 sg "mvn clean install"
             }
         }
-
-        stage('Test') {
-            steps {
-                // Ваши шаги тестирования
-            }
-        }
     }
 }
