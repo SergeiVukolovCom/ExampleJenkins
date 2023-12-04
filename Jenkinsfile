@@ -5,13 +5,28 @@ pipeline {
         stage('Build') {
             steps {
                 sh "mvn -version"
-                sg "mvn clean install"
+                sh "mvn clean install"
             }
         }
 
         stage('Test') {
             steps {
-                // Ваши шаги тестирования
+                sh "mvn test"
+            }
+        }
+
+        stage('Allure Report') {
+            steps {
+                script {
+                    sh "mvn allure:report"
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'target/allure-results']]
+                    ])
+                }
             }
         }
     }

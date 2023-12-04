@@ -47,6 +47,11 @@
             <version>LATEST</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>4.5.5</version>
+        </dependency>
     </dependencies>
 
 </project>
